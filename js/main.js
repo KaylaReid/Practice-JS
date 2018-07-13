@@ -36,28 +36,53 @@ const beatles = takeNumber("The Beatles")
 console.log(beatles) 
 
 
+// Stacking Words
 
-// Overly Excited 
-
-// Create an array that contains the words in the sentence
 let sentence = ["The","walrus","danced","through","the","trees","in","the","light","of","the","moon"];
 
-function addExcitement (boo) {
+function addExcitement (theWordArray) {
     let buildMeUp = ""
-    for (let i = 0; i < boo.length; i++) {
-        buildMeUp += boo[i] + " ";
+    for (let i = 0; i < theWordArray.length; i++) {
+        buildMeUp += theWordArray[i] + " ";
         console.log(buildMeUp);
     }
 }
 addExcitement(sentence)
 
-    // Each time the for loop executes, you're going to add one more word to this string
+// Overly Excited
 
-            // Concatenate the new word onto buildMeUp
+function addMoreExcitement (theWordArray) {
+    let buildMeUp = ""
+    let bang = 0
+    for (let i = 0; i < theWordArray.length; i++) {
+        buildMeUp += theWordArray[i] + " ";
+        bang++
+        if (bang % 3 === 0) { 
+            console.log(buildMeUp += "! ") 
+        } else {
+        console.log(buildMeUp);
+    }
+    }
+}
+addMoreExcitement(sentence)
 
-        // Print buildMeUp to the console
 
-// Invoke the function and pass in the array
+// Even More Excited
+let exclamation = " ! " 
 
+function overlyExcited (theWordArray) {
+    let buildMeUp = ""
+    let bang = 0
+    for (let i = 0; i < theWordArray.length; i++) {
+        buildMeUp += theWordArray[i] + " ";
+        bang++
+        if (bang % 3 === 0) { 
+            exclamation += "! "
+            console.log(buildMeUp += exclamation) 
 
-
+        } else {
+        console.log(buildMeUp);
+    }
+    }
+}
+overlyExcited(sentence)
