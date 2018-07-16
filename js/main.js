@@ -40,35 +40,35 @@ console.log(beatles)
 
 let sentence = ["The","walrus","danced","through","the","trees","in","the","light","of","the","moon"];
 
-function addExcitement (theWordArray) {
-    let buildMeUp = ""
-    for (let i = 0; i < theWordArray.length; i++) {
-        buildMeUp += theWordArray[i] + " ";
-        console.log(buildMeUp);
-    }
-}
-addExcitement(sentence)
+// function addExcitement (theWordArray) {
+//     let buildMeUp = ""
+//     for (let i = 0; i < theWordArray.length; i++) {
+//         buildMeUp += theWordArray[i] + " ";
+//         console.log(buildMeUp);
+//     }
+// }
+// addExcitement(sentence)
 
 // Overly Excited
 
-function addMoreExcitement (theWordArray) {
-    let buildMeUp = ""
-    let bang = 0
-    for (let i = 0; i < theWordArray.length; i++) {
-        buildMeUp += theWordArray[i] + " ";
-        bang++
-        if (bang % 3 === 0) { 
-            console.log(buildMeUp += "! ") 
-        } else {
-        console.log(buildMeUp);
-    }
-    }
-}
-addMoreExcitement(sentence)
+// function addMoreExcitement (theWordArray) {
+//     let buildMeUp = ""
+//     let bang = 0
+//     for (let i = 0; i < theWordArray.length; i++) {
+//         buildMeUp += theWordArray[i] + " ";
+//         bang++
+//         if (bang % 3 === 0) { 
+//             console.log(buildMeUp += "! ") 
+//         } else {
+//         console.log(buildMeUp);
+//     }
+//     }
+// }
+// addMoreExcitement(sentence)
 
 
 // Even More Excited
-let exclamation = " ! " 
+let exclamation = "" 
 
 function overlyExcited (theWordArray) {
     let buildMeUp = ""
@@ -86,3 +86,22 @@ function overlyExcited (theWordArray) {
     }
 }
 overlyExcited(sentence)
+
+// pass in any character you want
+
+// function anyArg (theWordArray, character) {
+//     let buildMeUp = ""
+    
+//     let characterContainer = character
+//     for (let i = 0; i < theWordArray.length; i++) {
+//         buildMeUp += theWordArray[i] + " ";
+//         if ((i - 2) % 3 === 0) { 
+//             buildMeUp += characterContainer
+//             characterContainer += character
+//         } else {
+//         console.log(buildMeUp);
+//     }
+//     }
+// }
+// anyArg(sentence, "? ")
+
