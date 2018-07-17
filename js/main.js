@@ -105,3 +105,65 @@ overlyExcited(sentence)
 // }
 // anyArg(sentence, "? ")
 
+
+// refactored option via meg
+function addExcitement (theWordArray, symb) {
+
+    let buildMeUp = "";
+    let wordCount = 0;
+
+    for (let i = 0; i < theWordArray.length; i++) {
+        wordCount ++;
+        let currentWord = theWordArray[i];
+        buildMeUp += " " + currentWord;
+
+        if(wordCount % 3 === 0){
+            buildMeUp = buildMeUp + symb.repeat(wordCount/3);
+        }
+        console.log(buildMeUp);
+    }
+
+}
+
+addExcitement(sentence, " SO GREAT ");
+
+// Referance 
+
+// this way of making objects has no restrictions
+let table = {
+    legs: 4,
+    maker: "Target",
+    color: "brown",
+    height: "12'",
+    material: "wood",
+    move: function(movement){
+        console.log(`This ${this.color} table will ${movement}!`);
+    }
+};
+
+table.move("dance");
+
+table.color = "black";
+table.move("dance");
+
+// object.creat has a defalt restriction of not letting you over write things in the object
+
+const sweetFactory = function(topping){
+    const sweet = Object.create({}, {
+        topping: {
+            value: topping
+        },
+        move: {
+            value: function(arg){
+                console.log(`The sweet will ${arg}`);
+            }
+        }
+    });
+    return sweet;
+};
+
+let arrayOsweets = [];
+
+arrayOsweets.push(sweetFactory("chocolate"), sweetFactory("vanilla"));
+
+console.log(arrayOsweets);
